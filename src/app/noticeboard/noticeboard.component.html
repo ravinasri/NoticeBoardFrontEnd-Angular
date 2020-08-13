@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body
+  background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAA1BMVEUAAACnej3aAAAASElEQVR4nO3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABODcYhAAEl463hAAAAAElFTkSuQmCC">
+  <div class="row">
+
+    <div *ngFor="let notice of notices " class=col-sm-4>
+      <div class="card" style="width: 15rem;">
+
+        <a href="{{notice.url}}"> <img src={{notice.imageurl}} class="card-img-top"></a>
+        <div class="card-body" style="background-color:black;">
+          <h5 class="card-title" style="color: white;font-family: 'Times New Roman', Times, serif;"> {{notice.title}}
+          </h5>
+          <p class="card-text" style="color: white;font-family: 'Times New Roman', Times, serif;">{{notice.description}}
+          </p>
+          <!-- <p class="card-text" style="color: white;font-family: 'Times New Roman', Times, serif;">{{notice.hashtags}}</p> -->
+         
+             <button type="button" class="btn btn-outline-dark" id="bt" (click)="update()">
+            <div class="" style="color:white;font-style: italic;">{{value}}{{notice.hashtags}} </div>
+          </button>
+          
+
+          <button style="margin:20px;" (click)="deleteEmployee(notice.id)" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        
+           <button style="margin:25px;"(click)="employeeDetails(notice.id)" class="btn btn-info" style="margin-left: 10px"><i class="fa fa-eye" aria-hidden="true"></i></button>
+          
+          <button style="margin:20px;" (click)="updatee(notice.id)" class="btn btn-danger"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+
+          <ng-container *ngIf="show">
+            <div style="margin: 0 auto;text-align: left;">
+              <div>
+
+                <div>
+                  <!-- <input #box (keyup.enter)="onEnter(box.value)" id="tbname" value={{value}}>
+  <input id="tbname"   name="yourname" value={{value}} [(ngModel)]="Value" />  -->
+                </div>
+                <input #box (keyup.enter)="onEnter(box.value)">
+                <p>{{value}}</p>
+              </div>
+
+
+            </div>
+          </ng-container>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <router-outlet></router-outlet>
+</body>
+</html>

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "noticeboard-angular"
+    }
+  },
+  "defaultProject": "noticeboard-angular",
+  "cli": {
+    "analytics": "c5577e0d-8073-4103-9816-e12b2bba027b"
+  }
 }

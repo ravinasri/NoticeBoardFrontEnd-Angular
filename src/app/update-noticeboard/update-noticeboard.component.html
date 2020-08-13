@@ -1,0 +1,26 @@
+
+<body
+background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAA1BMVEUAAACnej3aAAAASElEQVR4nO3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABODcYhAAEl463hAAAAAElFTkSuQmCC">
+
+<!-- <h3 style="color: crimson;font-family: 'Times New Roman', Times, serif;">NoticeBoard</h3> -->
+<div style="width: 400px;color: white;">
+  <form (ngSubmit)="onSubmit()">
+  
+
+    <div class="form-group">
+      <label for="name"><h5>Id</h5></label>
+      <input type="text" class="form-control" id="id" required [(ngModel)]="notice.id" name="id">
+    </div>
+    <div class="form-group">
+      <label for="name"><h5>Title</h5></label>
+      <input type="text" class="form-control" id="title" required [(ngModel)]="notice.title" name="title">
+    </div>
+  
+
+   
+
+    <button type="submit" class="btn btn-danger">Edit</button>
+  </form>
+</div>
+
+</body>

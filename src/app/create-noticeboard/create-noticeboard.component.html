@@ -1,0 +1,46 @@
+<body background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAA1BMVEUAAACnej3aAAAASElEQVR4nO3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABODcYhAAEl463hAAAAAElFTkSuQmCC">
+
+
+<div [hidden]="submitted" style="width: 400px;color:white;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" required [(ngModel)]="notice.title" name="title">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Description</label>
+      <input type="text" class="form-control" id="description" required [(ngModel)]="notice.description" name="description">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Imageurl</label>
+      <input type="text" class="form-control" id="imageurl" required [(ngModel)]="notice.imageurl" name="imageurl">
+    </div>
+
+  
+      <div class="form-group">
+        <label for="name">Url</label>
+        <input type="text" class="form-control" id="url" required [(ngModel)]="notice.url" name="url">
+      </div>
+      <div class="form-group">
+        <label for="name">Hashtags</label>
+        <input type="text" class="form-control" id="hashtags" required [(ngModel)]="notice.hashtags" name="hashtags">
+      </div>
+      <div class="form-group">
+        <label for="name"> Author</label>
+        <input type="text" class="form-control" id="author_id" required [(ngModel)]="notice.author_id" name="author_id">
+      </div>
+      <div class="form-group">
+        <label for="name"> Board</label>
+        <input type="text" class="form-control" id="board_id" required [(ngModel)]="notice.board_id" name="board_id">
+      </div>
+    <button type="submit" class="btn btn-danger">Add</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+
+</div>
+</body>
